@@ -1,0 +1,13 @@
+<div class='container'>
+    <h1>First Angular Project -Home</h1>
+    <p>You've clicked <button  class='btn' (click) = "countClick()"> this</button> {{clickCounter}} items</p>
+    <p><button (click)="resetCounter()" class='btn'>Reset Counter</button></p>
+
+    <div>
+        <input type='text' [(ngModel)]="name" />
+        <br>
+        <strong>You said: </strong> {{name}}
+    </div>
+    
+    
+</div>
