@@ -1,10 +1,21 @@
 <div class='container'>
     <h2>Tasks ...</h2>
 
-    <ul>
-        <li>Make Launch </li>
-        <li>Study Angular</li>
-        <li>Take A break</li>
-        <li>Check daily News</li>
+    <ul  class="task-items-container"*ngIf="brows">
+        
+        <li class = "task-item" *ngFor="let brew of brows">
+            <div>
+
+                <h5>
+
+                    {{brew.name}} - <span>{{brew.brewery_type}}</span>
+                </h5>
+
+                <p>{{brew.city}} - {{brew.state}}</p>
+                <p>Published: {{brew.created_at}} </p>
+                <a href={{brew.website_url}}>Site</a>
+            </div>    
+        
+        </li>
     </ul>
 </div>

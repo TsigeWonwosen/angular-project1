@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import {HttpService} from '../../http.service'
+
 @Component({
   selector: 'app-tasks',
   templateUrl: './tasks.component.html',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TasksComponent implements OnInit {
 
-  constructor() { }
+  brows: any;
 
-  ngOnInit(): void {
+  constructor(private _http:HttpService) {  }
+
+  
+  ngOnInit() {
+    // this._http.myMethod()
+    this._http.getBeer().subscribe(data => {
+      this.brows = data;
+      console.log(this.brows)
+    })
+    
+    
+    this._http.myMethod()
+    console.log(typeof this.brows)
   }
 
 }

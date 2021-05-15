@@ -3,11 +3,21 @@
     <p>You've clicked <button  class='btn' (click) = "countClick()"> this</button> {{clickCounter}} items</p>
     <p><button (click)="resetCounter()" class='btn'>Reset Counter</button></p>
 
-    <div>
+    <div class='play-container'>
         <input type='text' [(ngModel)]="name" />
         <br>
         <strong>You said: </strong> {{name}}
     </div>
     
-    
+    <div class='play-container' [style.background-color]="clickCounter > 4 ? '#f2f2f2' : 'gray' ">
+        <ng-template [ngIf]="clickCounter > 4" [ngIfElse]="none">
+
+            <p>The click counter is <strong>Greater</strong> than 4</p>
+        </ng-template>
+
+        <ng-template #none >
+            <p>The click counter is <strong>Less than</strong> than 4</p>
+
+        </ng-template>
+    </div>
 </div>

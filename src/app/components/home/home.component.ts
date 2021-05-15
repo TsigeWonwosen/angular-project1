@@ -12,7 +12,6 @@ clickCounter: number = 10;
 name:string =' ';
 
  countClick = () => { this.clickCounter += 1
-console.log(this.clickCounter)
 }
 
  
