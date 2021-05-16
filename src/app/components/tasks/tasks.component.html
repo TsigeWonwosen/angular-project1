@@ -2,17 +2,13 @@
     <h2>Tasks ...</h2>
 
     <ul  class="task-items-container"*ngIf="brows">
-        
         <li class = "task-item" *ngFor="let brew of brows">
             <div>
-
                 <h5>
-
                     {{brew.name}} - <span>{{brew.brewery_type}}</span>
                 </h5>
-
                 <p>{{brew.city}} - {{brew.state}}</p>
-                <p>Published: {{brew.created_at}} </p>
+               <p *ngIf = "brew.street ? true:false">  Street: {{brew.street}} </p>
                 <a href={{brew.website_url}}>Site</a>
             </div>    
         
