@@ -1,0 +1,22 @@
+.footer {
+  background-color: black;
+  color: aliceblue;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.footer p {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.footer span {
+  font-size: 0.8rem;
+  color: rgb(97, 115, 150);
+  margin-top: 0.5rem;
+}

@@ -6,7 +6,6 @@ import { HomeComponent } from './components/home/home.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 
 
-
 const routes: Routes = [{
   path:'' , component : HomeComponent,
 },
