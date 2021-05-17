@@ -8,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class ButtonComponent implements OnInit {
 
   constructor() { }
-
+public isShow : boolean = true;
   ngOnInit(): void {
   }
 
+  showText (){
+    this.isShow = !this.isShow
+   
+  }
 }

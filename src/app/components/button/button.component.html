@@ -1,1 +1,8 @@
-<p>button works!</p>
+
+<div class="container">
+
+    <button class="show" (click)="showText()"> {{isShow ? "Show Text": "Hide Text"}}</button>
+    <div class="box">
+        <p *ngIf="isShow ? true : false">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, eum, esse dolores eaque numquam asperiores delectus aut quo corrupti, distinctio molestiae porro consequatur nemo dignissimos accusantium nesciunt nulla corporis voluptate.</p>
+    </div>
+</div>

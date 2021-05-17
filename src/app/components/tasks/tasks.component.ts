@@ -15,7 +15,7 @@ export class TasksComponent implements OnInit {
 
   
   ngOnInit() {
-    // this._http.myMethod()
+    
     this._http.getBeer().subscribe(data => {
       this.brows = data;
       console.log(this.brows)
