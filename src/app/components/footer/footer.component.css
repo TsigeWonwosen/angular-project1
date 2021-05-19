@@ -19,4 +19,5 @@
   font-size: 0.8rem;
   color: rgb(97, 115, 150);
   margin-top: 0.5rem;
+  text-transform: capitalize;
 }
