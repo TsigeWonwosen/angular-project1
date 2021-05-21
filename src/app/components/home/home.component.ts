@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeeService } from 'src/app/employee.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
-clickCounter: number = 10;
-name:string =' ';
+  clickCounter: number = 10;
+  name:string =' ';
+  public employees:any= [];
+  
+  constructor(private _employeeService:EmployeeService) { }
 
  countClick = () => { this.clickCounter += 1
 }
@@ -18,7 +21,9 @@ name:string =' ';
 resetCounter = () => {this.clickCounter = 0}
  
 
-  ngOnInit(): void {
+  ngOnInit(){
+
+    this.employees = this._employeeService.getEmployees()
   }
 
 }

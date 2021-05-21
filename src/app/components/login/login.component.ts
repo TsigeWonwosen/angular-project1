@@ -9,6 +9,7 @@ export class LoginComponent implements OnInit {
 
   constructor() { }
 
+  today = new Date()
   ngOnInit(): void {
   }
 

@@ -1,5 +1,12 @@
 <div class='container'>
     <h1>First Angular Project -Home</h1>
+    <div class="employee">
+        <h2>Angular Service </h2>
+        <ul *ngFor="let employee of employees">
+            <li>{{employee.id}} - {{employee.name}} {{employee.age}}</li>
+
+        </ul>
+    </div>
     <p>You've clicked <button  class='btn' (click) = "countClick()"> this</button> {{clickCounter}} items</p>
     <p><button (click)="resetCounter()" class='btn'>Reset Counter</button></p>
 
@@ -8,7 +15,6 @@
         <br>
         <strong>You said: </strong> {{name}}
     </div>
-    
     <div class='play-container' [style.background-color]="clickCounter > 4 ? '#f2f2f2' : 'gray' ">
         <ng-template [ngIf]="clickCounter > 4" [ngIfElse]="none">
 

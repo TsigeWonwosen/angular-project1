@@ -9,7 +9,7 @@ import {HttpService} from '../../http.service'
 })
 export class TasksComponent implements OnInit {
 
-  brows: any;
+  brows: any=[];
 
   constructor(private _http:HttpService) {  }
 
