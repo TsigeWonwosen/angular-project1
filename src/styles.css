@@ -11,11 +11,10 @@ body {
 }
 
 .container {
-  max-width: 80%;
+  max-width: 90%;
   margin: 40px auto 10px;
   overflow: auto;
   min-height: 300px;
-  border: 1px solid rgb(134, 160, 180);
   padding: 30px 30px 10px;
   border-radius: 5px;
   display: flex;
