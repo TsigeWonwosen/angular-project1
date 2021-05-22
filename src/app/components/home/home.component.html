@@ -2,10 +2,15 @@
     <h1>First Angular Project -Home</h1>
     <div class="employee">
         <h2>Angular Service </h2>
-        <ul *ngFor="let employee of employees">
-            <li>{{employee.id}} - {{employee.name}} {{employee.age}}</li>
+        <div class="employee-table">
+            <div class="employee-table-header">
+<span>ID</span> <span>Name</span> <span>Age</span>
 
-        </ul>
+            </div>
+            <ul *ngFor="let employee of employees">
+                <li><span>{{employee.id | number:"2.0"}}</span>  <span>{{employee.name}}</span> <span>{{employee.age}}</span></li>
+            </ul>
+        </div>
     </div>
     <p>You've clicked <button  class='btn' (click) = "countClick()"> this</button> {{clickCounter}} items</p>
     <p><button (click)="resetCounter()" class='btn'>Reset Counter</button></p>

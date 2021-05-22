@@ -18,12 +18,12 @@ export class TasksComponent implements OnInit {
     
     this._http.getBeer().subscribe(data => {
       this.brows = data;
-      console.log(this.brows)
+      console.table(this.brows[0])
     })
     
     
     this._http.myMethod()
-    console.log(typeof this.brows)
+    console.table(this.brows)
   }
 
 }
