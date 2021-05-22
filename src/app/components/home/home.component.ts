@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   clickCounter: number = 10;
   name:string =' ';
   public employees:IEmployee[] = [];
+  public errorMsg:any;
   
   constructor(private _employeeService:EmployeeService) { }
 
@@ -24,7 +25,7 @@ resetCounter = () => {this.clickCounter = 0}
 
   ngOnInit(){
 
-   this._employeeService.getEmployees().subscribe(data =>  this.employees = data)
+   this._employeeService.getEmployees().subscribe(data =>  this.employees = data,error => this.errorMsg = error)
 
 }
 

@@ -38,6 +38,9 @@ a {
   text-decoration: none;
   color: rgb(220, 223, 226);
 }
+a.active {
+  color: #6ed361;
+}
 
 a:hover {
   color: rgb(154, 222, 240);

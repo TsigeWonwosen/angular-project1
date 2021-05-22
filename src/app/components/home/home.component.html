@@ -1,11 +1,11 @@
 <div class='container'>
     <h1>First Angular Project -Home</h1>
     <div class="employee">
-        <h2>Angular Service </h2>
+        <h4>Angular Service - Employees</h4>
+        {{errorMsg}}
         <div class="employee-table">
             <div class="employee-table-header">
 <span>ID</span> <span>Name</span> <span>Age</span>
-
             </div>
             <ul *ngFor="let employee of employees">
                 <li><span>{{employee.id | number:"2.0"}}</span>  <span>{{employee.name}}</span> <span>{{employee.age}}</span></li>
