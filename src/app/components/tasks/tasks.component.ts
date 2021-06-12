@@ -22,9 +22,14 @@ export class TasksComponent implements OnInit {
     
     
     this._http.myMethod()
-    console.table(this.brows)
   }
 selectBrew(brew:any){
   this.router.navigate(['/tasks',brew.id])
+}
+
+deleteBrew(id:string){
+  this.brows = this.brows.filter((brow:any) => brow.id  !== id )
+  console.log("Id >> " + id)
+
 }
 }

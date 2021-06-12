@@ -11,7 +11,7 @@
                <p *ngIf = "brew.street ? true:false">  Street: {{brew.street}} </p>
                 <a href={{brew.website_url}}>Site</a>
             </div>    
-        
+        <button (click)="deleteBrew(brew.id)" class='btn-delete'>X</button>
         </li>
     </ul>
 </div>
