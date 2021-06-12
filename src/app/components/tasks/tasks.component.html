@@ -2,7 +2,7 @@
     <h2>Tasks ...</h2>
 
     <ul  class="task-items-container"*ngIf="brows">
-        <li class = "task-item" *ngFor="let brew of brows">
+        <li (click) = "selectBrew(brew)"class = "task-item" *ngFor="let brew of brows">
             <div>
                 <h5>
                     {{brew.name}} - <span>{{ brew.brewery_type}}</span>

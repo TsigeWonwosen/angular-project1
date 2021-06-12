@@ -1,1 +1,12 @@
-<p>task-item works!</p>
+<div class="container">
+
+    <p>Task-item Id : {{taskId}}</p>
+
+
+    <li class="task-item" ng-repeat="brew in brows | filter:{id: taskId}:true">
+        <div>
+           <!-- {{ brew}} -->
+        </div>
+    
+    </li>
+</div>
