@@ -29,7 +29,6 @@ selectBrew(brew:any){
 
 deleteBrew(id:string){
   this.brows = this.brows.filter((brow:any) => brow.id  !== id )
-  console.log("Id >> " + id)
 
 }
 }
