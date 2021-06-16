@@ -11,7 +11,7 @@
         <li (click)="selectBrew(brew)" class="task-item" *ngFor="let brew of ItemsFromParent">
             <div>
                 <h5>
-                    {{brew.name}} - <span>{{ brew.brewery_type}}</span>
+                    {{brew.name | uppercase}} - <span>{{ brew.brewery_type}}</span>
                 </h5>
                 <p>{{brew.city}} - {{brew.state}}</p>
                 <p *ngIf="brew.street ? true:false"> Street: {{brew.street}} </p>
