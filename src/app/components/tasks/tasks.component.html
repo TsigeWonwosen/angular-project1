@@ -1,17 +1,3 @@
-<div class='container'>
-    <h2>Tasks ...</h2>
 
-    <ul  class="task-items-container" *ngIf="brows">
-        <li (click) = "selectBrew(brew)"  class = "task-item" *ngFor="let brew of brows">
-            <div>
-                <h5>
-                    {{brew.name}} - <span>{{ brew.brewery_type}}</span>
-                </h5>
-                <p>{{brew.city}} - {{brew.state}}</p>
-               <p *ngIf = "brew.street ? true:false">  Street: {{brew.street}} </p>
-                <a href={{brew.website_url}}>Site</a>
-            </div>    
-        <button (click)="deleteBrew(brew.id)" class='btn-delete'>X</button>
-        </li>
-    </ul>
-</div>
+<app-task-item [ItemsFromParent]= "brows" ></app-task-item>
+   

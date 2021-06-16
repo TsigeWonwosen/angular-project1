@@ -1,12 +1,23 @@
 <div class="container">
 
-    <p>Task-item Id : {{taskId}}</p>
+    <div *ngIf="taskId ? true:false"> 
+
+        <p  >Task-item Id : {{taskId}}</p>
+        <h3>Title : {{singleTask }}</h3>
+    </div>
 
 
-    <li class="task-item" ng-repeat="brew in brows | filter:{id: taskId}:true">
-        <div>
-           <!-- {{ brew}} -->
-        </div>
-    
-    </li>
+    <ul class="task-items-container" *ngIf="brows">
+        <li (click)="selectBrew(brew)" class="task-item" *ngFor="let brew of ItemsFromParent">
+            <div>
+                <h5>
+                    {{brew.name}} - <span>{{ brew.brewery_type}}</span>
+                </h5>
+                <p>{{brew.city}} - {{brew.state}}</p>
+                <p *ngIf="brew.street ? true:false"> Street: {{brew.street}} </p>
+                <a href={{brew.website_url}}>Site</a>
+            </div>
+            <button (click)="deleteBrew(brew.id)" class='btn-delete'>X</button>
+        </li>
+    </ul>
 </div>

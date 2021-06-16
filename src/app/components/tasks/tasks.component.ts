@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router'
 import {HttpService} from '../../http.service'
 
 @Component({
@@ -11,7 +10,7 @@ export class TasksComponent implements OnInit {
 
   brows: any=[];
 
-  constructor(private _http:HttpService, private router:Router) {  }
+  constructor(private _http:HttpService) {  }
 
   
   ngOnInit() {
@@ -23,12 +22,5 @@ export class TasksComponent implements OnInit {
     
     this._http.myMethod()
   }
-selectBrew(brew:any){
-  this.router.navigate(['/tasks',brew.id])
-}
 
-deleteBrew(id:string){
-  this.brows = this.brows.filter((brow:any) => brow.id  !== id )
-
-}
 }
