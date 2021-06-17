@@ -2,8 +2,6 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable,throwError } from 'rxjs';
 import {catchError} from 'rxjs/operators'
-// import 'rxjs/add/operator/catch'
-// import 'rxjs/add/observable/throw'
 
 import {IEmployee} from './employee'
 
@@ -13,7 +11,6 @@ import {IEmployee} from './employee'
 export class EmployeeService {
 
   private _url:string = "/assets/data/employee.json"
-// errorHandler:string;
   constructor(private http: HttpClient) { }
 
   getEmployees():Observable<IEmployee[]>{
