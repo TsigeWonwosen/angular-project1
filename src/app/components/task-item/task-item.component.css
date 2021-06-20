@@ -1,16 +1,3 @@
-.container {
-  width: 100%;
-  min-height: 80vh;
-}
-
-.task-items-container {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-  gap: 0.5rem;
-  font-size: 0.75rem;
-}
-
 .task-item {
   background: rgb(230, 238, 238);
   display: flex;
@@ -21,6 +8,12 @@
   border-radius: 5px;
   margin: 0.5rem 1rem;
   position: relative;
+  transition: all 0.3s ease-in;
+  min-height: 150px;
+}
+
+.task-item:hover {
+  box-shadow: 0 2px 0.2rem rgba(0, 0, 0, 0.2);
 }
 
 h5 {

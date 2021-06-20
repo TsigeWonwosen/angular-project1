@@ -1,0 +1,12 @@
+.container {
+  width: 100%;
+  min-height: 80vh;
+}
+
+.task-items-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.5rem;
+  font-size: 0.75rem;
+}

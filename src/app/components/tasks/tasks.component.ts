@@ -23,4 +23,8 @@ export class TasksComponent implements OnInit {
     this._http.myMethod()
   }
 
+  deleteItem(id: string){
+    this.brows = this.brows.filter((brow:any) => brow.id !== id)
+
+  }
 }

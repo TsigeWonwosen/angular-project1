@@ -14,6 +14,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { EmployeeService } from './employee.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SingleTaskComponent } from './components/single-task/single-task.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HomeComponent,
     FooterComponent,
     LoginComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    SingleTaskComponent
   ],
   imports: [
     BrowserModule,

@@ -1,23 +1,14 @@
-<div class="container">
+    
+    <li class='task-item ' (click)="selectBrew(ItemsFromParent)">
 
-    <div *ngIf="taskId ? true:false"> 
-
-        <p  >Task-item Id : {{taskId}}</p>
-        <h3>Title : {{singleTask }}</h3>
-    </div>
-
-
-    <ul class="task-items-container" *ngIf="brows">
-        <li (click)="selectBrew(brew)" class="task-item" *ngFor="let brew of ItemsFromParent">
-            <div>
-                <h5>
-                    {{brew.name | uppercase}} - <span>{{ brew.brewery_type}}</span>
-                </h5>
-                <p>{{brew.city}} - {{brew.state}}</p>
-                <p *ngIf="brew.street ? true:false"> Street: {{brew.street}} </p>
-                <a href={{brew.website_url}}>Site</a>
-            </div>
-            <button (click)="deleteBrew(brew.id)" class='btn-delete'>X</button>
-        </li>
-    </ul>
-</div>
+        <div>
+            <h5>
+                {{ItemsFromParent.name | uppercase}} - <span>{{ ItemsFromParent.brewery_type}}</span>
+            </h5>
+            <p>{{ItemsFromParent.city}} - {{ItemsFromParent.state}}</p>
+            <p *ngIf="ItemsFromParent.street ? true:false"> Street: {{ItemsFromParent.street}} </p>
+            <a href={{ItemsFromParent.website_url}}>Site</a>
+        </div>
+        <button (click)="deleteBrew(ItemsFromParent.id)" class='btn-delete'>X</button>
+    </li>
+        
