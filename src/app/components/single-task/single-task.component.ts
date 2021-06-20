@@ -11,27 +11,24 @@ import {HttpService} from '../../http.service'
 export class SingleTaskComponent implements OnInit {
 
 
-  public id: string | null;
-  public singleBrow :any
+  public Id: any;
+  public singleBrow :any;
 
-  constructor(private activatedRoute: ActivatedRoute, private _http:HttpService) {
-  this.activatedRoute.queryParams.subscribe(params => {
-        let date = params['id'];
-        console.log(params); // Print the parameter to the console. 
-    });
-}
+  constructor(private activatedRoute: ActivatedRoute, private _http:HttpService,private router:Router) {}
 
 
   ngOnInit(): void {
 
-    this.id = this.activatedRoute.snapshot.paramMap.get('id');
+  this.Id = this.activatedRoute.snapshot.paramMap.get('id');
 
-    this._http.getBeer().subscribe(data => {
-      if(data === this.id){
-
+    this._http.getBeerByParams(this.Id).subscribe(data => {
+    
         this.singleBrow = data;
-      }
+      
   })
   
+}
+goBack (){
+  this.router.navigate(['/tasks'])
 }
 }

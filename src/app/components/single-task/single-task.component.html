@@ -1,5 +1,17 @@
 <div class="container">
 
-    <h2>Single Card [{{id}}]</h2>
-    <p>Name {{singleBrow}}</p>
+    <h2>Single Card [{{Id}}]</h2>
+    <li class='task-item '>
+
+        <div>
+            <h5>
+                {{singleBrow.name | uppercase}} - <span>{{ singleBrow.brewery_type}}</span>
+            </h5>
+            <p>{{singleBrow.city}} - {{singleBrow.state}}</p>
+            <p *ngIf="singleBrow.street ? true:false"> Street: {{singleBrow.street}} </p>
+            <a href={{singleBrow.website_url}}>Site</a>
+        </div>
+        <button  class='btn-delete' (click)="goBack()">Back</button>
+    </li>
+        
 </div>

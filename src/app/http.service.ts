@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import {HttpClient} from '@angular/common/http'
+import {HttpClient,HttpParams} from '@angular/common/http'
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,12 @@ export class HttpService {
 
   getBeer(){
     return this.http.get('https://api.openbrewerydb.org/breweries')
-    
+  }
+
+  getBeerByParams(id:string){
+    return this.http.get(`https://api.openbrewerydb.org/breweries/${id}`)
+
+
   }
 
   myMethod(){

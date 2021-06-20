@@ -12,9 +12,11 @@ import { ButtonComponent } from './components/button/button.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
-import { EmployeeService } from './employee.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SingleTaskComponent } from './components/single-task/single-task.component';
+
+import { EmployeeService } from './employee.service';
+import { HttpService } from './http.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,7 @@ import { SingleTaskComponent } from './components/single-task/single-task.compon
     FormsModule,
     HttpClientModule
   ],
-  providers: [EmployeeService],
+  providers: [EmployeeService,HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
