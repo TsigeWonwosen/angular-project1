@@ -1,14 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpService} from '../../http.service'
 
+ export interface UserInterface{
+    user: String;
+    email: String;
+    role: String;
+}
+
 @Component({
   selector: 'app-tasks',
   templateUrl: './tasks.component.html',
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit {
-
+  
+ 
   brows: any=[];
+  public user:UserInterface;
 
   constructor(private _http:HttpService) {  }
 
@@ -20,7 +28,7 @@ export class TasksComponent implements OnInit {
     })
     
     
-    this._http.myMethod()
+    this.user = this._http.myMethod()
   }
 
   deleteItem(id: string | null){

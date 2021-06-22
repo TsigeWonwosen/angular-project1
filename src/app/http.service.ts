@@ -2,6 +2,12 @@ import { Injectable } from '@angular/core';
 
 import {HttpClient,HttpParams} from '@angular/common/http'
 
+export interface UserInterface{
+    user: String;
+    email: String;
+    role: String;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -21,6 +27,6 @@ export class HttpService {
   }
 
   myMethod(){
-    // console.log("Hey Whats Up?")
+    return {user:"Wonde" , email:"wonde@gmail.com", role:"Admin"}
   }
 }
