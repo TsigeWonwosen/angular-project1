@@ -1,14 +1,8 @@
 <div class="container">
 
 
-    {{user.user}} {{user.email}} {{user.role}}
+    {{user.user | uppercase}} {{user.email}} {{user.role}} 
 <div class="task-items-container" >
-    <!-- <div *ngIf="taskId ? true:false">
-    
-        <p>Task-item Id : {{taskId}}</p>
-        <h3>Title : {{singleTask.name }}</h3>
-    </div> -->
-
     <ul class="task-item" *ngFor="let brow of brows  ">
 
         <app-task-item [ItemsFromParent]= "brow"  (deleteItem) = "deleteItem($event)"></app-task-item>

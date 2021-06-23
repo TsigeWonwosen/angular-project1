@@ -3,7 +3,7 @@
     <h2>Single Card [{{Id}}]</h2>
     <li class='task-item '>
 
-        <div>
+        <div *ngIf = "singleBrow">
             <h5>
                 {{singleBrow.name | uppercase}} - <span>{{ singleBrow.brewery_type}}</span>
             </h5>

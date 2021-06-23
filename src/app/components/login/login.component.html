@@ -1,20 +1,29 @@
-
 <div class="login-container">
+  <form class="login-form">
+    <h2>{{ "Login" | uppercase }}</h2>
+    <span>{{ today | date: "fullDate" }}</span>
+    <div class="input">
+      <label for="">User Name </label>
 
-    <div class="login-form">
-        <h2>{{'Login' | uppercase}} </h2> <span>{{today | date:'fullDate' }}</span>
-        <div class="input">
-            <label for="">User Name </label>
-
-            <input type="text">
-        </div>
-        <div class="input">
-            <label for="">Password </label>
-            <input type="text">
-        </div>
-        <button>{{'Login' | uppercase }}</button>
-    <p>OR</p>
-        <button>{{'Register' | uppercase }}</button>
-
+      <input
+        type="text"
+        value=""
+        name="uname"
+        #uname="ngModel"
+        class="form-control"
+        [class.isInvalid]="uname.invalid && uname.touched"
+        required
+        minlength="5"
+        ngModel
+      />
     </div>
+    <div class="input">
+      <label for="">Password </label>
+
+      <input type="password" value="" name="password" required ngModel />
+    </div>
+    <button>{{ "Login" | uppercase }}</button>
+    <p>OR</p>
+    <button>{{ "Register" | uppercase }}</button>
+  </form>
 </div>

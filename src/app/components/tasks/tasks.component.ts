@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {HttpService} from '../../http.service'
 
  export interface UserInterface{
-    user: String;
-    email: String;
-    role: String;
+    user: string;
+    email: string;
+    role: string;
 }
 
 @Component({

@@ -1,7 +1,7 @@
 import { Component, OnInit ,Input,Output, EventEmitter} from '@angular/core';
 import {Router} from '@angular/router'
 
-import {ActivatedRoute} from '@angular/router'
+import {ActivatedRoute, ParamMap} from '@angular/router'
 import {HttpService} from '../../http.service'
 
 
@@ -22,8 +22,11 @@ export class TaskItemComponent implements OnInit {
 @Output() deleteItem : EventEmitter<any> = new EventEmitter()
 
   ngOnInit(): void {
-    let id = this.route.snapshot.paramMap.get('id');
-this.taskId = id;
+    // let id = this.route.snapshot.paramMap.get('id');
+    this.route.paramMap.subscribe((params:ParamMap) => {
+      let id = params.get('id')
+      this.taskId = id;
+    })
    this._http.getBeer().subscribe(data => {
       this.brows = data
       

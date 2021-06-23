@@ -3,9 +3,9 @@ import { Injectable } from '@angular/core';
 import {HttpClient,HttpParams} from '@angular/common/http'
 
 export interface UserInterface{
-    user: String;
-    email: String;
-    role: String;
+    user: string;
+    email: string;
+    role: string;
 }
 
 @Injectable({
